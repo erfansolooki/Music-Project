@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-+qdLaIRZfNu4cVPK/PxJJEy0B0f3Ugv8i482AKY7gwXwhaCroABd086ybrVKTa0q" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./playlist.css">
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand order-lg-1" href="#">
+                <span class="h3"><i class="bi bi-music-note-list"></i></span>
+               </a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  
+                    <a href="#" class="nav-link selected px-2">صفحه اصلی</a>
+                  
+                    <a href="#" class="nav-link">جدیدترین ها</a>
+               
+                <span class="nav-item dropdown px-2">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                        ترین ها
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark order-lg-0">
+                        <a href="#" class="dropdown-item">پربازدید ترین ها</a>
+                        <a href="#" class="dropdown-item">پردانلود ترین ها</a>
+                    </ul>
+                </span>
+ 
+                    <a href="#" class="nav-link pe-2">پیشنهاد ما</a>
+
+                <form class="d-flex">
+                    <div class="input-group">
+                        <button class="input-group-text btn btn-light" id="search" type="submit"><i class="bi bi-search"></i></button>
+                        <input class="form-control me-2" type="search" placeholder="جستجو ... " aria-label="Search" for="search">
+                    </div>
+                  </form>
+               </ul>
+           </div>
+           
+        </div>
+    </nav>
+
+   <div class="container text-white mt-5">
+        <div class="music-player w-100">
+            <div class="player">
+               <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-4">
+                <img src="" alt="audio-image" id="image" class="img-fluid rounded">
+                <span class="h2 ms-4 d-none d-md-block" id="title">Song Name</span>
+               </div>
+               
+               <div class="row">
+                <div class="controls col-md-7 d-flex  justify-content-center d-md-inline-block mb-2 mb-md-0" dir="ltr">
+                    <button aria-label="Name" class="previous bg-dark border-0" id="previous"><i class="bi bi-chevron-double-left text-muted h3"></i></button>
+                    <button aria-label="Name" class="play-pause bg-dark border-0" id="play-pause"><i class="bi bi-caret-right text-muted h2"></i></button>
+                    <button aria-label="Name" class="next bg-dark border-0" id="next"><i class="bi bi-chevron-double-right text-muted h3"></i></button>
+                </div>
+
+                 <div class="slidecontainer col-5 mt-3 d-none d-md-block" dir="ltr">
+                    <i class="bi bi-volume-down text-muted"></i>
+                    <input type="range" class="slider" min="0" max="100" value="50">
+                    <i class="bi bi-volume-up text-muted"></i>
+                </div>
+               </div>
+
+                <div class="progress-bar bg-dark" dir="ltr">
+                    <input type="range" id="progress-bar" min="0" max="" value="0" />
+                </div>
+                <div class="track-time mt-2 me-2 text-end text-muted">
+                  <span id="durationTime"></span>  
+                  <span>/</span>
+                  <span id="currentTime"></span>
+                    
+                </div>
+
+            </div>
+
+            <div class="playlist">
+                <h2>لـیـست پـخش</h2>
+                <ul class="song-list">
+                    <li data-src="./Music/Alireza-Talischi-Ghaf-128.mp3" data-img="./pictures/Alireza-Talischi-Ghaf.jpg" data-name="قــاف - عـلـیـرضـا طـلیسچی" data-index="0">
+                        <div class="preview w-75 d-md-flex justify-content-between flex-sm-row flex-column">
+                          <div> عـلیـرضـا طـلیسچی</div>
+                          <div class="text-muted">قــاف</div>
+                        </div>
+                        <span>
+                           <span class="d-none d-md-inline-block me-2">03:23</span>
+                           <span>
+                            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="left" title="اشتراک گذاری">
+                              <i class="bi bi-three-dots text-white"></i>
+                            </button>
+                           </span>
+                        </span>
+                    </li>
+                    <li data-src="./Music/Shayea - Asabani.mp3" data-img="./pictures/Asabani-shayea-album.jpg" data-name="شــایـع - عصبــانـی" data-index="1">
+                        <div class="preview w-75 d-md-flex justify-content-between flex-sm-row flex-column">
+                          <div>شــایـع</div>
+                          <div class="ms-md-5 text-muted">عصبــانـی</div>
+                        </div>
+                        <span>
+                           <span class="d-none d-md-inline-block me-2">04:50</span>
+                           <span>
+                            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="left" title="اشتراک گذاری">
+                              <i class="bi bi-three-dots text-white"></i>
+                            </button>
+                           </span>
+                        </span>
+                    </li>
+                    <li data-src="./Music/Canis-Hey-Ghosse-(Ft-Emma)-320.mp3" data-img="./pictures/canis_& emma_hey_ghosse.jpg" data-name="کـنـیـس و امـا - هـی غـصه" data-index="2">
+                       <div class="preview w-75 d-md-flex justify-content-between flex-sm-row flex-column">
+                        <div>کــنـیـس و امـا </div>
+                        <div class="text-muted">هـی غصـه</div>
+                       </div>
+                        <span>
+                           <span class="d-none d-md-inline-block me-2">04:36</span>
+                           <span>
+                            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="left" title="اشتراک گذاری">
+                              <i class="bi bi-three-dots text-white"></i>
+                            </button>
+                           </span>
+                        </span>
+                    </li>
+                    <li data-src="./Music/Mehrad-Hidden-Chenar-(Ft-Zakhmi)-128.mp3" data-img="./pictures/chenar-hidden.jpg" data-name="مـهراد هیـدن و زخـمـی - چــنـار" data-index="3">
+                       <div class="preview w-75 d-md-flex justify-content-between flex-sm-row flex-column">
+                        <div>مـهراد هیـدن و زخـمـی</div>
+                        <div class="text-muted">چــنـار</div>
+                       </div>
+                        <span>
+                           <span class="d-none d-md-inline-block me-2">04:34</span>
+                           <span>
+                            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="left" title="اشتراک گذاری">
+                              <i class="bi bi-three-dots text-white"></i>
+                            </button>
+                           </span>
+                        </span>
+                    </li>
+                    <li data-src="./Music/Hoorosh-Band-To-Mese-Daryai-128 - Shortcut.lnk" data-img="./pictures/Hoorosh-Band-To-Mese-Daryai.jpg" data-name="هـوروش بـنـد - تو مـثل دریـایـی" data-index="4">
+                        <div class="preview w-75 d-md-flex justify-content-between flex-sm-row flex-column">
+                          <div>هـوروش بـنـد</div>
+                          <div class="text-muted">تو مـثل دریـایـی</div>
+                        </div>
+                        <span>
+                           <span class="d-none d-md-inline-block me-2">04:34</span>
+                           <span>
+                            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="left" title="اشتراک گذاری">
+                              <i class="bi bi-three-dots text-white"></i>
+                            </button>
+                           </span>
+                        </span>
+                    </li>
+                    <li data-src="./Music/Masoud-Sadeghloo-Hamsafar-128.mp3" data-img="./pictures/Masoud-Sadeghloo-Hamsafar.jpg" data-name="مـسـعـود صـادقـلـو - هـمـسـفـر" data-index="5">
+                        <div class="preview w-75 d-md-flex justify-content-between flex-sm-row flex-column">
+                          <div>مـسـعـود صـادقـلـو</div>
+                          <div class="text-muted">هـمـسـفـر</div>
+                        </div>
+                        <span>
+                           <span class="d-none d-md-inline-block me-2">03:05</span>
+                           <span>
+                            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="left" title="اشتراک گذاری">
+                              <i class="bi bi-three-dots text-white"></i>
+                            </button>
+                           </span>
+                        </span>
+                    </li>
+                    <li data-src="./Music/Bozorg-Bitab-320.mp3" data-img="./pictures/Mehrad Hidden Ft Saman Wilson - Bozorg Vol 2.jpg" data-name="مـهراد هـیدن و سـامـان ویـلسـون - بـزرگ" data-index="6">
+                        <div class="preview w-75 d-md-flex justify-content-between flex-sm-row flex-column">
+                          <div>مـهراد هـیدن</div>
+                          <div class="text-muted">بـزرگ</div>
+                        </div>
+                        <span>
+                           <span class="d-none d-md-inline-block me-2">04:33</span>
+                           <span>
+                            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="left" title="اشتراک گذاری">
+                              <i class="bi bi-three-dots text-white"></i>
+                            </button>
+                           </span>
+                        </span>
+                    </li>
+                    <li data-src="./Music/Meysam-Ebrahimi-Jamoon-Avaz-128.mp3" data-img="./pictures/Meysam-Ebrahimi-Jamoon-Avaz.jpg" data-name="مـیـثـم ابـراهیـمی - جـامـون عوض" data-index="7">
+                        <div class="preview w-75 d-md-flex justify-content-between flex-sm-row flex-column">
+                          <div>مـیـثـم ابـراهیـمی</div>
+                          <div class="text-muted">جـامـون عوض</div>
+                        </div>
+                        <span>
+                           <span class="d-none d-md-inline-block me-2">03:10</span>
+                           <span>
+                            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="left" title="اشتراک گذاری">
+                              <i class="bi bi-three-dots text-white"></i>
+                            </button>
+                           </span>
+                        </span>
+                    </li>
+                    <li data-src="./Music/Puzzle-Ghasedak-128.mp3" data-img="./pictures/Puzzle-Band-Ghasedak.jpg" data-name="پــازل بـنـد - قـاصـدک" data-index="8">
+                        <div class="preview w-75 d-md-flex justify-content-between flex-sm-row flex-column">
+                          <div>پــازل بـنـد</div>
+                          <div class="text-muted">قـاصـدک </div>
+                        </div>
+                        <span>
+                           <span class="d-none d-md-inline-block me-2">03:48</span>
+                           <span>
+                            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="left" title="اشتراک گذاری">
+                              <i class="bi bi-three-dots text-white"></i>
+                            </button>
+                           </span>
+                        </span>
+                    </li>
+                    <li data-src="./Music/Sogand-Baroon-320.mp3 me-2" data-img="./pictures/Sogand - Baroon.jpg" data-name="سـوگـنـد - بــارون" data-index="9">
+                       <div class="preview w-75 d-md-flex justify-content-between flex-sm-row flex-column">
+                        <div>سـوگـنـد </div>
+                        <div class="text-muted">بــارون </div>
+                       </div>
+                        <span>
+                           <span class="d-none d-md-inline-block me-2">03:21</span>
+                           <span>
+                            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="left" title="اشتراک گذاری">
+                              <i class="bi bi-three-dots text-white"></i>
+                            </button>
+                           </span>
+                        </span>
+                    </li>
+                </ul>
+                <audio src="" id="audio"></audio>
+            </div>
+        </div>
+    </div>
+
+    <hr class="text-white my-5">
+
+<footer class="container">
+ <div class="row justify-content-center justify-content-md-start text-center text-center text-md-start">
+  <ul class="me-md-3 me-0 col-9 col-md-4">
+    <li class="mb-2">
+     <i class="bi bi-music-note-list text-white h3"></i>
+      <span class="text-white h3 ms-2">مـوزیــک</span>
+    </li>
+    <li class="mb-2">
+      <p class="text-muted">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
+    </li>
+    <li>
+     <i class="bi bi-instagram text-white h4"></i>
+     <i class="bi bi-facebook text-white h4 mx-3"></i>
+     <i class="bi bi-twitter text-white h4"></i>
+     <i class="bi bi-telegram text-white h4 mx-3"></i>
+    </li>
+  </ul>
+ 
+  <ul class="mx-md-5 mx-0 col-9 col-md-2">
+    <li class="mb-2">
+       <a href="#" class="text-white text-decoration-none">
+         حـسـاب کـاربـری مـن
+       </a>
+     </li>
+     <li class="mb-2">
+       <a href="#" class="text-muted text-decoration-none">
+         آهنـگ هـای ذخیـره شده
+       </a>
+     </li>
+     <li class="mb-2">
+       <a href="#" class="text-muted text-decoration-none">
+         مـورد علـاقـه هــا
+       </a>
+     </li>
+     <li class="mb-2">
+      <a href="#" class="text-muted text-decoration-none">
+       بـازدیـد هـای اخیـر
+      </a>
+     </li>
+     <li>
+       <a href="#" class="text-muted text-decoration-none">
+         پـیـام هـای مـن
+       </a>
+     </li>
+  </ul>
+ 
+  <ul class="col-9 col-md-2">
+   <li class="mb-2">
+      <a href="#" class="text-white text-decoration-none">
+        دربــاره مــا
+      </a>
+    </li>
+    <li class="mb-2">
+      <a href="#" class="text-muted text-decoration-none">
+      سـال تـسـیـس
+      </a>
+    </li>
+    <li class="mb-2">
+      <a href="#" class="text-muted text-decoration-none">
+       تـوضـیـحـات
+      </a>
+    </li>
+    <li class="mb-2">
+     <a href="#" class="text-muted text-decoration-none">
+     رسـالـت مــا
+     </a>
+    </li>
+    <li class="mb-2">
+      <a href="#" class="text-muted text-decoration-none">
+       هـمـکـاران
+      </a>
+    </li>
+ </ul>
+
+ <div class="col-md-2 col-6">
+   <form action="">
+     <label for="" class="form-label text-white">اطلاع از جدیدترین ها</label>
+     <div class="input-group">
+      <input type="email" class="form-control" name="" id="" placeholder="لطفا ایمیل خود را وارد کنید">
+      <button type="submit" class="btn btn-primary">
+        <i class="bi bi-send"></i>
+      </button>
+     </div>
+   </form>
+ </div>
+
+ </div>
+</footer>
+
+    <script src="./playlist.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

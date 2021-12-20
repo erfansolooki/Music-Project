@@ -1,0 +1,314 @@
+body {
+  font-family: vazir,sans-serif;
+  background: #212529;
+}
+
+.navbar {
+  -webkit-box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+          box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+}
+
+.navbar .input-group-text {
+  border-left: solid 1px rgba(0, 0, 0, 0.1) !important;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.navbar .input-group-text:hover {
+  opacity: .9;
+}
+
+.right-header h2,
+.right-header h6 {
+  color: #fff !important;
+}
+
+.right-header h2 {
+  color: #1B24A4 !important;
+  font-weight: 600;
+}
+
+.right-header .btn-dark {
+  border-color: #fff;
+}
+
+.left-header img {
+  height: 25rem;
+}
+
+#carouselDark .carousel-control-prev,
+#carouselDark .carousel-control-next {
+  width: 10% !important;
+}
+
+.first-slider h4,
+.third-slider h4 {
+  width: 32%;
+}
+
+@media only screen and (max-width: 992px) {
+  h4 {
+    width: 100% !important;
+  }
+}
+
+.carousel-inner {
+  height: 35rem;
+}
+
+.carousel-inner .carousel-item {
+  background-color: #212529;
+}
+
+.carousel-inner .row {
+  height: 35rem;
+}
+
+.carousel-inner .row .card {
+  height: 30rem;
+}
+
+.carousel-inner .row .card img {
+  height: 20rem;
+}
+
+.carousel-inner .row .card .badge {
+  cursor: pointer;
+}
+
+.carousel-inner .row .card i {
+  font-size: 1.1rem;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.carousel-inner .row .card .like-number {
+  font-size: 1.1rem;
+}
+
+.carousel-inner .row .card .play {
+  bottom: 2.9rem;
+}
+
+.carousel-inner .row .card .play i {
+  font-size: 2rem;
+}
+
+.carousel-inner .row .card .title {
+  bottom: 1.5rem !important;
+}
+
+@media only screen and (max-width: 576px) {
+  .carousel-inner,
+  #row {
+    height: 30rem !important;
+  }
+  .card {
+    height: 24rem !important;
+  }
+  .card img {
+    height: 14rem !important;
+  }
+}
+
+.first-slider h4 {
+  position: relative;
+  z-index: 2;
+  margin-top: 1.5rem;
+}
+
+.red {
+  color: #dc3545 !important;
+}
+
+.third-slider .carousel-inner {
+  height: 28rem;
+}
+
+.third-slider .carousel-inner .card {
+  height: 20rem;
+  border: none !important;
+}
+
+.third-slider .carousel-inner .card .card-body {
+  bottom: 3rem;
+}
+
+.third-slider .carousel-inner .card img {
+  height: 14rem;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.third-slider .carousel-inner .card i {
+  bottom: 8rem !important;
+  font-size: 3.5rem;
+  visibility: hidden;
+  -webkit-transform: translateY(-60px) !important;
+          transform: translateY(-60px) !important;
+  -webkit-transition: .3s ease-in-out !important;
+  transition: .3s ease-in-out !important;
+}
+
+.third-slider .carousel-inner .card:hover img {
+  opacity: .5;
+}
+
+.third-slider .carousel-inner .card:hover i {
+  visibility: visible;
+  -webkit-transform: translateY(0px) !important;
+          transform: translateY(0px) !important;
+}
+
+.third-slider .carousel-control-prev,
+.third-slider .carousel-control-next {
+  width: 7% !important;
+}
+
+.fourth-slider .carousel-inner {
+  height: 25rem;
+}
+
+.fourth-slider .carousel-inner .card {
+  height: 22rem;
+  border: none !important;
+}
+
+.fourth-slider .carousel-inner .card .card-body {
+  bottom: 3rem;
+}
+
+.fourth-slider .carousel-inner .card img {
+  height: 15rem;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.fourth-slider .carousel-inner .card i {
+  font-size: 3.5rem;
+  bottom: 7.5rem !important;
+  visibility: hidden;
+  -webkit-transform: translateY(-50px) !important;
+          transform: translateY(-50px) !important;
+  -webkit-transition: .3s ease-in-out !important;
+  transition: .3s ease-in-out !important;
+}
+
+.fourth-slider .carousel-inner .card:hover img {
+  opacity: .5;
+}
+
+.fourth-slider .carousel-inner .card:hover i {
+  visibility: visible;
+  -webkit-transform: translateY(0px) !important;
+          transform: translateY(0px) !important;
+}
+
+.fourth-slider .carousel-control-prev,
+.fourth-slider .carousel-control-next {
+  width: 7% !important;
+}
+
+.fith-slider h4 {
+  top: 3rem;
+  z-index: 1;
+}
+
+.fith-slider .carousel-inner {
+  height: 28rem !important;
+}
+
+.fith-slider .carousel-inner .card {
+  height: 16rem !important;
+  border: none !important;
+}
+
+.fith-slider .carousel-inner .card .card-body {
+  bottom: 3rem;
+}
+
+.fith-slider .carousel-inner .card img {
+  height: 15rem;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.fith-slider .carousel-inner .card i {
+  font-size: 3.5rem;
+  bottom: 8.8rem !important;
+  visibility: hidden;
+  -webkit-transform: translateY(-60px) !important;
+          transform: translateY(-60px) !important;
+  -webkit-transition: .3s ease-in-out !important;
+  transition: .3s ease-in-out !important;
+}
+
+.fith-slider .carousel-inner .card:hover img {
+  opacity: .5;
+}
+
+.fith-slider .carousel-inner .card:hover i {
+  visibility: visible;
+  -webkit-transform: translateY(0px) !important;
+          transform: translateY(0px) !important;
+}
+
+.fith-slider .carousel-control-prev,
+.fith-slider .carousel-control-next {
+  width: 7% !important;
+}
+
+@media only screen and (min-width: 576px) {
+  fith-slider .card img {
+    height: 13rem !important;
+  }
+}
+
+.container .card:hover {
+  -webkit-filter: drop-shadow(7px 10px 10px black);
+          filter: drop-shadow(7px 10px 10px black);
+}
+
+.container .card {
+  height: 30rem;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.container .card img {
+  height: 19em;
+}
+
+.container .card .badge .bi-heart {
+  font-size: 1.1rem;
+}
+
+.container .card i {
+  cursor: pointer;
+}
+
+.container .card .card-body .play {
+  font-size: 2rem;
+  bottom: 3rem;
+}
+
+.container .card .card-body .title {
+  bottom: 1.5rem;
+}
+
+#more {
+  display: none;
+}
+
+.more i {
+  top: .3rem !important;
+}
+
+.more .less-text {
+  display: none;
+}
+
+.selected {
+  color: #fff !important;
+}
+/*# sourceMappingURL=style.css.map */
